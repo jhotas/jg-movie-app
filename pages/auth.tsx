@@ -5,6 +5,9 @@ import { useCallback, useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
+import { FcGoogle } from 'react-icons/fc'
+import { FaGithub } from 'react-icons/fa'
+
 const Auth = () => {
   const router = useRouter();
   const [email, setEmail] = useState('');
@@ -89,6 +92,51 @@ const Auth = () => {
                 {variant === 'login' ? 'Criar conta' : 'Login'}
               </span>
             </p>
+            <div className='flex text-white items-center mt-6 justify-center'>
+              <span className='w-32 h-px mr-4 bg-white'></span>
+              <p>Ou</p>
+              <span className='w-32 h-px ml-4 bg-white'></span>
+            </div>
+            <div className='flex flex-row items-center gap-4 mt-8 justify-center'>
+                <div 
+                  onClick={() => signIn('google', { callbackUrl: '/'})}
+                  className='
+                    w-10
+                    h-10
+                    bg-white
+                    rounded-full
+                    flex
+                    items-center
+                    justify-center
+                    cursor-pointer
+                    hover:opacity-80
+                    hover:w-20
+                    transition-all
+                    duration-300
+                    ease-in-out
+                '>
+                  <FcGoogle size={30} />
+                </div>
+                <div 
+                  onClick={() => signIn('github', { callbackUrl: '/'})}
+                  className='
+                    w-10
+                    h-10
+                    bg-white
+                    rounded-full
+                    flex
+                    items-center
+                    justify-center
+                    cursor-pointer
+                    hover:opacity-80
+                    hover:w-20
+                    transition-all
+                    duration-300
+                    ease-in-out
+                '>
+                  <FaGithub size={30} />
+                </div>
+            </div>
           </div>
         </div>
       </div>

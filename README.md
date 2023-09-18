@@ -6,11 +6,6 @@ Welcome to JG Movie, your go-to streaming platform for movies and TV series! Thi
 
 - [Features](#features)
 - [Technologies](#technologies)
-- [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
