@@ -15,6 +15,18 @@ const config: Config = {
           700: '#29179B',
         }
       },
+      width: {
+        '640': '40rem',
+      },
+      height: {
+        '640': '40rem',
+      },
+      blur: {
+        '5xl': '128px',
+      },
+      screens: {
+        'cell': '320px',
+      },
     },
   },
   plugins: [],
