@@ -84,7 +84,7 @@ const Navbar = () => {
             <div onClick={toggleAccountMenu} className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden hover:border-2 border-primary-500">
               <img src="/images/miles.jpg" />
             </div>
-            <BsChevronDown onMouseOver={toggleAccountMenu} onMouseOut={toggleAccountMenu} className={`text-white transition ${showAccountMenu ? 'rotate-180' : 'rotate-0'}`} />
+            <BsChevronDown onClick={toggleAccountMenu} className={`text-white transition ${showAccountMenu ? 'rotate-180' : 'rotate-0'}`} />
             <AccountMenu visible={showAccountMenu} />
           </div>
         </div>
