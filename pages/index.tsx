@@ -7,8 +7,15 @@ import Banner from '@/components/Banner'
 import requests from '@/utils/requests'
 import { Movie } from '@/typings'
 
-interface Props {
+interface Props {  
   netflixOriginals: Movie[]
+  trendingNow: Movie[]
+  topRated: Movie[]
+  actionMovies: Movie[]
+  comedyMovies: Movie[]
+  horrorMovies: Movie[]
+  romanceMovies: Movie[]
+  documentaries: Movie[]
 }
 
 export async function getServerSideProps(context: NextPageContext) {
@@ -61,7 +68,16 @@ export async function getServerSideProps(context: NextPageContext) {
   }
 }
 
-const Home = ({ netflixOriginals }: Props) => {
+const Home = ({ 
+  netflixOriginals,
+  actionMovies,
+  comedyMovies,
+  documentaries,
+  horrorMovies,
+  romanceMovies,
+  topRated,
+  trendingNow,
+}: Props) => {
   return (
     <>
       <Navbar />
